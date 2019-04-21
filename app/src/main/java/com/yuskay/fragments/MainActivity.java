@@ -29,7 +29,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if (status){
             FirstFragment firstFragment = new FirstFragment();
-            fragmentTransaction.add(R.id.fragmentContainer, firstFragment);
+            //fragmentTransaction.add(R.id.fragmentContainer, firstFragment);
+            fragmentTransaction.replace(R.id.fragmentContainer, firstFragment);
             fragmentTransaction.commit();
             fragmentTransaction.addToBackStack(null);
             btnFragment.setText("Load Second Fragment");
@@ -37,7 +38,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         else {
             SecondFragment secondFragment = new SecondFragment();
-            fragmentTransaction.add(R.id.fragmentContainer, secondFragment);
+            //fragmentTransaction.add(R.id.fragmentContainer, secondFragment);
+            fragmentTransaction.replace(R.id.fragmentContainer, secondFragment);
             fragmentTransaction.commit();
             fragmentTransaction.addToBackStack(null);
             btnFragment.setText("Load First Fragment");
